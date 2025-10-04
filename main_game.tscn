@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dhw0may3xvnh"]
+
+[node name="Main game" type="Node"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(640, 150)
+offset_left = 2.0
+offset_top = 361.0
+offset_right = 642.0
+offset_bottom = 571.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="HSplitContainer" type="HFlowContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HSplitContainer"]
+custom_minimum_size = Vector2(170, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Challenge/Buff/Debuff Details  
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel diam vel leo rutrum fermentum sed eget enim."
+clip_text = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HSplitContainer"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Button" type="Button" parent="MarginContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+text = "monke 1"
+
+[node name="Button2" type="Button" parent="MarginContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+text = "monke 2"
+
+[node name="Button3" type="Button" parent="MarginContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+text = "monke 3"
+
+[node name="Button" type="Button" parent="MarginContainer/HSplitContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Tower Skills & Icon"
