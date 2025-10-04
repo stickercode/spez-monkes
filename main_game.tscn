@@ -1,49 +1,69 @@
-[gd_scene format=3 uid="uid://dhw0may3xvnh"]
+[gd_scene load_steps=3 format=3 uid="uid://dhw0may3xvnh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihbon"]
+bg_color = Color(0.455344, 0.666909, 0.390617, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_1oj5k"]
 
 [node name="Main game" type="Node"]
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-custom_minimum_size = Vector2(640, 150)
-offset_left = 2.0
-offset_top = 361.0
-offset_right = 642.0
-offset_bottom = 571.0
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = -1
+anchor_top = 0.773
+anchor_bottom = 0.773
+offset_left = -0.499168
+offset_top = 1.88275
+offset_right = 649.501
+offset_bottom = 151.883
+theme_override_styles/panel = SubResource("StyleBoxFlat_ihbon")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+custom_minimum_size = Vector2(610, 150)
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
 
-[node name="HSplitContainer" type="HFlowContainer" parent="MarginContainer"]
+[node name="HSplitContainer" type="HFlowContainer" parent="PanelContainer/MarginContainer"]
+custom_minimum_size = Vector2(640, 100)
 layout_mode = 2
+size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="MarginContainer/HSplitContainer"]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HSplitContainer"]
 custom_minimum_size = Vector2(170, 100)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxLine_1oj5k")
 text = "Challenge/Buff/Debuff Details  
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel diam vel leo rutrum fermentum sed eget enim."
+autowrap_mode = 2
 clip_text = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HSplitContainer"]
-custom_minimum_size = Vector2(100, 20)
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/HSplitContainer"]
+custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 3
 
-[node name="Button" type="Button" parent="MarginContainer/HSplitContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/HSplitContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 text = "monke 1"
 
-[node name="Button2" type="Button" parent="MarginContainer/HSplitContainer/HBoxContainer"]
+[node name="Button2" type="Button" parent="PanelContainer/MarginContainer/HSplitContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 text = "monke 2"
 
-[node name="Button3" type="Button" parent="MarginContainer/HSplitContainer/HBoxContainer"]
+[node name="Button3" type="Button" parent="PanelContainer/MarginContainer/HSplitContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 text = "monke 3"
 
-[node name="Button" type="Button" parent="MarginContainer/HSplitContainer"]
-custom_minimum_size = Vector2(50, 50)
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/HSplitContainer"]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 3
 text = "Tower Skills & Icon"
