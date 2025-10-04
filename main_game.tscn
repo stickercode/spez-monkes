@@ -3,7 +3,8 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihbon"]
 bg_color = Color(0.455344, 0.666909, 0.390617, 1)
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_1oj5k"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1oj5k"]
+bg_color = Color(0.793977, 0.702555, 0.764074, 1)
 
 [node name="Main game" type="Node"]
 
@@ -11,20 +12,21 @@ bg_color = Color(0.455344, 0.666909, 0.390617, 1)
 anchors_preset = -1
 anchor_top = 0.773
 anchor_bottom = 0.773
-offset_left = -0.499168
-offset_top = 1.88275
-offset_right = 649.501
-offset_bottom = 151.883
+offset_top = 1.95996
+offset_right = 650.0
+offset_bottom = 106.96
+size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_ihbon")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
-custom_minimum_size = Vector2(610, 150)
+custom_minimum_size = Vector2(610, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
 
 [node name="HSplitContainer" type="HFlowContainer" parent="PanelContainer/MarginContainer"]
 custom_minimum_size = Vector2(640, 100)
@@ -35,8 +37,9 @@ size_flags_vertical = 0
 custom_minimum_size = Vector2(170, 100)
 layout_mode = 2
 size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 11
-theme_override_styles/normal = SubResource("StyleBoxLine_1oj5k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1oj5k")
 text = "Challenge/Buff/Debuff Details  
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel diam vel leo rutrum fermentum sed eget enim."
 autowrap_mode = 2
