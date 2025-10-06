@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://clsfq7dw0f0x8"]
+
+[ext_resource type="Script" uid="uid://bk443u127kcar" path="res://scripts/coin.gd" id="1_i64fm"]
+[ext_resource type="Texture2D" uid="uid://nef5i73wtwqe" path="res://assets/coin.png" id="2_11l1o"]
+
+[sub_resource type="FontVariation" id="FontVariation_pdq0q"]
+
+[node name="Coin" type="CanvasLayer"]
+script = ExtResource("1_i64fm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.91
+anchor_right = 0.91
+offset_left = 0.503357
+offset_top = 0.549747
+offset_right = 41.5034
+offset_bottom = 58.5497
+grow_horizontal = 0
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_pdq0q")
+theme_override_font_sizes/font_size = 42
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(-35.9034, 29.4503)
+texture = ExtResource("2_11l1o")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
