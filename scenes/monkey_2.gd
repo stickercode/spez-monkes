@@ -1,7 +1,7 @@
 extends Area2D
 
-var hp = 5.0
-var dmg = 2
+var hp = 3.0
+var dmg = 1
 var cooldown = .5
 
 @export var speed: float = 50
